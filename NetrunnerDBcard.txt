@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Eliza&#039;s Toybox &middot; NetrunnerDB</title>
+	<link rel="icon" sizes="16x16" href="/favicon.png" />
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/qtip2/2.1.1/jquery.qtip.css">
+    <link rel="stylesheet" href="/web/bundles/netrunnerdbbuilder/css/style.css?v1.6.13">
+    <link rel="stylesheet" href="/web/bundles/netrunnerdbbuilder/css/icons.css?v1.6.13">
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/qtip2/2.1.1/jquery.qtip.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.9.3/typeahead.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highcharts/3.0.9/highcharts.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/pagedown/1.0/Markdown.Converter.min.js"></script>
+    <script src="/web/bundles/netrunnerdbbuilder/js/taffy.js?v1.6.13"></script>
+    <script src="/web/bundles/netrunnerdbbuilder/js/jquery.textcomplete.min.js?v1.6.13"></script>
+    <script src="/web/bundles/netrunnerdbbuilder/js/nrdb.js?v1.6.13"></script>
+    <script src="/web/bundles/netrunnerdbbuilder/js/nrdb.data.js?v1.6.13"></script>
+    <script src="/web/bundles/netrunnerdbbuilder/js/nrdb.format.js?v1.6.13"></script>
+    <script src="/web/bundles/netrunnerdbbuilder/js/nrdb.tip.js?v1.6.13"></script>
+    
+    <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-44413511-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+    </script>
+  </head>
+  <body>
+  <div id="wrapper">
+      <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">NetrunnerDB</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/en/decks">My Decks</a></li>
+            <li><a href="/en/decklists/popular">Decklists</a></li>
+            <li><a href="/en/search">Cards</a></li>
+			<li><a href="/en/rules">Rules</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+                      <li><a href="/login">Login</a></li>
+                    </ul>
+          <form class="navbar-form navbar-right hidden-xs hidden-sm" action="/find/" target="_blank">
+            <div class="form-group">
+              <input type="text" placeholder="Card Search" class="form-control" name="q">
+            </div>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+  
+
+<div class="container">
+
+<div class="row">
+	<form method="GET" action="/find/" id="search-form" class="form-inline" role="form">
+		<div class="col-sm-4 form-group">
+			<input style="width:70%" class="form-control" size="30" name="q" id="search-input" tabindex="1" value="06042" title="Search tips:
+   e: extension (word)
+   t: type (word)
+   s: subtype (word)
+   f: faction (letter)
+   x: text (word)
+   p: strength (number)
+   o: cost (number)
+   n: influence (number)
+   d: side (letter)
+   c: cycle (number)
+   a: flavor (word)
+   i: illustrator (word)
+   r: release date (date)
+   u: unique (number)
+
+Example: [ t:asset f:j ] displays all Jinteki assets">
+			<button class="btn btn-primary" type="submit">Search</button>
+		</div>
+		<div class="col-sm-4">
+<select name="sort" class="form-control">
+	<option value="name"    >Sort by Name</option>
+	<option value="set"     selected>Sort by Set</option>
+	<option value="faction" >Sort by Faction</option>
+	<option value="type"    >Sort by Type</option>
+	<option value="cost"    >Sort by Cost</option>
+	<option value="strength">Sort by Strength</option>
+</select>
+</div>
+<div class="col-sm-4">
+<select name="view" class="form-control">
+	<option value="list"    >View as a Checklist</option>
+	<option value="spoiler" >View as a Spoiler</option>
+	<option value="card"    selected>View as Full Cards</option>
+	<option value="scan"    >View as Scans only</option>
+	<option value="short"   >View as Simple List</option>
+</select>
+<input name="_locale" type="hidden" value="en">
+</div>	</form>
+</div>
+
+
+<div id="list">
+
+<div class="row">
+<div class="col-sm-12">
+<ul class="pager">
+	<li class="previous">
+			</li>
+	<li>
+		<a href="/en/set/fc">First Contact</a>
+	</li>
+	<li class="next">
+			</li>
+</ul>
+</div>
+</div>
+
+
+<div class="row">
+
+	
+		
+<div class="row">
+	<div class="card-image col-sm-6"><img src="/web/bundles/netrunnerdbcards/images/cards/en/06042.png" class="img-responsive" style="margin:auto"></div>
+	<div class="card-info col-sm-6">
+	<div class="panel panel-default panel-primary">
+		<div class="panel-heading">
+    		<h3 class="panel-title card-title">
+    			&diams;				<a href="http://netrunnerdb.com/en/card/06042" class="card-title card-preview">Eliza&#039;s Toybox</a>
+			</h3>
+  		</div>
+	<div class="panel-body">
+		<div class="card-type">
+			<span class="card-type">Asset</span><span class="card-subtype">: Ritzy</span>			&bull;
+																					Rez: 4 &bull; Trash: 4 &bull; Influence: 2					</div>
+		<div class="card-text">
+			<p><span class="icon icon-click"></span>,<span class="icon icon-click"></span>,<span class="icon icon-click"></span>: Rez a card, ignoring all costs.</p>
+		</div>
+		<div class="card-flavor">
+			<small>Eliza's Toybox is the preeminent purveyor of high-class debauchery on the moon, courtesy of its bioroid pleasure models and other exotica. Every fantasy has its price.</small>
+		</div>
+		<div class="card-illustrator">
+			<small>
+			Haas-Bioroid &bull;
+			Henning Ludvigsen &bull; First Contact #42
+						</small>
+		</div>
+	</div>
+	</div>
+		
+		<table class="table">
+		<thead>
+		<tr><th><span class="glyphicon glyphicon-comment"></span> 5 comments</th></tr>
+		</thead>
+		<tbody>
+				<tr><td>
+		<span class="opinion-date">Apr 24, 2014</span>
+		<a href="/en/profile/610/nbove" class="opinion-author username anarch">nbove</a>
+		<div class="opinion-text"><p>Just stating the obvious, but this seems almost broken good in a HB big ice deck.  It is not unusual for a game to be decided by a game can be won by simply getting a melange mining corp set up and getting 2 turns of use out of it.  This card is essentially the equivalent of getting 2 full melange turns off in a single turn if you use it to rez a Wotan or Janus.</p>
+</div>
+		</td></tr>
+				<tr><td>
+		<span class="opinion-date">Apr 26, 2014</span>
+		<a href="/en/profile/1432/sydan" class="opinion-author username jinteki">sydan</a>
+		<div class="opinion-text"><p>The issue is that you have to rez the ice in your turn and reveal it, you don't want to do that with Wotan or Janus really...</p>
+</div>
+		</td></tr>
+				<tr><td>
+		<span class="opinion-date">May 05, 2014</span>
+		<a href="/en/profile/387/Talism" class="opinion-author username anarch">Talism</a>
+		<div class="opinion-text"><p>Looking forward to using this,</p>
+</div>
+		</td></tr>
+				<tr><td>
+		<span class="opinion-date">May 07, 2014</span>
+		<a href="/en/profile/159/lghitman" class="opinion-author username shaper">lghitman</a>
+		<div class="opinion-text"><p>Janus works best as a surprise ice, while Wotan is more of a "go away" ice</p>
+</div>
+		</td></tr>
+				<tr><td>
+		<span class="opinion-date">May 22, 2014</span>
+		<a href="/en/profile/1877/Wakks" class="opinion-author username neutral">Wakks</a>
+		<div class="opinion-text"><p>Would you Biotic Labor to install something and rez it with the Toybox in one turn? Assuming the Toybox is unrezzed, it would be 8 credits and some resources to get something up and running. But if the store activates again, you've made some good artificial paydirt. Y'know, maybe Weyland: BWBI could use this card. The influence is low, and the poorest Weyland could use some free Archers, Hadrians, and Tyrants. It's a bit toward the slow side, but BWBI is slow already.</p>
+</div>
+		</td></tr>
+				</tbody>
+		</table>
+				<p>You must be logged in to post comments.</p>
+			</div>
+</div>
+
+
+
+	</div>
+
+<div class="row">
+<div class="col-sm-12">
+<ul class="pager">
+	<li class="previous">
+			</li>
+	<li>
+		<a href="/en/set/fc">First Contact</a>
+	</li>
+	<li class="next">
+			</li>
+</ul>
+</div>
+</div>
+
+
+</div>
+
+</div>
+    <div id="push"></div>
+  </div>
+    <div id="footer">
+    <div class="container">
+    <div class="row">
+    <ul class="list-inline pull-right">
+    	<li><a class="flag flag-us" href="/en/card/06042"></a></li>
+<li><a class="flag flag-fr" href="/fr/card/06042"></a></li>
+<li><a class="flag flag-de" href="/de/card/06042"></a></li>
+<li><a class="flag flag-es" href="/es/card/06042"></a></li>
+<li><a class="flag flag-pl" href="/pl/card/06042"></a></li>
+<li><a class="flag flag-it" href="/it/card/06042"></a></li>
+
+	    </ul>
+    
+    <ul class="list-inline">
+    <li><a href="/en/about">About</a></li>
+    <li><a href="/en/apidoc">API</a></li>
+    <li><a href="/tools/demo">Integration</a></li>
+    <li><a href="/en/donators">Donators</a> <span class="glyphicon glyphicon-gift donator" title="NetrunnerDB Gracious Donator"></span></li>
+    <li><a href="javascript:localStorage.clear()">Clear data</a></li>
+    </ul>
+    </div>
+    
+    <div class="row">
+    <p>
+    Designed and built by <a href="//twitter.com/alsciende">@alsciende</a> 
+    </p>
+    
+    </div>
+    <div class="row">
+    <p>
+    Source code, Bug reports, Feature Requests and Changelog on <a href="https://github.com/Alsciende/netrunnerdb">GitHub</a>
+    </p>
+    
+    </div>
+    
+    <div class="row">
+    <p>
+    Contribute by giving money on <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4SB7QHB5XRN7Y">Paypal (€)</a> or <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HHBUW2QYG6ZUC">Paypal ($)</a> or directly to <i>alsciende</i> (at) <i>icloud.com</i>.
+    </p>
+    </div>
+    
+    <div class="row small">
+    <p>
+    The information presented on this site about Android:Netrunner, both literal and graphical, is copyrighted by Fantasy Flight Games and/or Wizards of the Coast.
+    </p>
+    <p>
+    This website is not produced, endorsed, supported, or affiliated with Fantasy Flight Games and/or Wizards of the Coast. 
+    </p>
+    </div>
+    </div>
+    </div>
+  </body>
+</html>
+

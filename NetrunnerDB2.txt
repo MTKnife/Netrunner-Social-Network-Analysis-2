@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>First Clone deck &middot; NetrunnerDB</title>
+	<link rel="icon" sizes="16x16" href="/favicon.png" />
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/qtip2/2.1.1/jquery.qtip.css">
+    <link rel="stylesheet" href="/web/bundles/netrunnerdbbuilder/css/style.css?v1.6.13">
+    <link rel="stylesheet" href="/web/bundles/netrunnerdbbuilder/css/icons.css?v1.6.13">
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/qtip2/2.1.1/jquery.qtip.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.9.3/typeahead.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highcharts/3.0.9/highcharts.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/pagedown/1.0/Markdown.Converter.min.js"></script>
+    <script src="/web/bundles/netrunnerdbbuilder/js/taffy.js?v1.6.13"></script>
+    <script src="/web/bundles/netrunnerdbbuilder/js/jquery.textcomplete.min.js?v1.6.13"></script>
+    <script src="/web/bundles/netrunnerdbbuilder/js/nrdb.js?v1.6.13"></script>
+    <script src="/web/bundles/netrunnerdbbuilder/js/nrdb.data.js?v1.6.13"></script>
+    <script src="/web/bundles/netrunnerdbbuilder/js/nrdb.format.js?v1.6.13"></script>
+    <script src="/web/bundles/netrunnerdbbuilder/js/nrdb.tip.js?v1.6.13"></script>
+    
+    <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-44413511-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+    </script>
+<script src="/web/bundles/netrunnerdbbuilder/js/nrdb.draw_simulator.js?v1.6.13"></script>
+<script src="/web/bundles/netrunnerdbbuilder/js/nrdb.card_modal.js?v1.6.13"></script>
+<script src="/web/bundles/netrunnerdbbuilder/js/decklist.js?v1.6.13"></script>
+<script type="text/javascript">
+
+var Identity = null
+	Decklist = {"id":"6276","ts":"2014-05-31 15:16:22","name":"First Clone deck","prettyname":"first-clone-deck","creation":"2014-05-31 15:16:22","rawdescription":"","description":"\n","precedent":null,"user_id":"994","username":"Link","usercolor":"shaper","reputation":"6","donation":"0","identity_code":"05029","faction_code":"criminal","nbvotes":"0","nbfavorites":"0","nbcomments":"0","comments":[],"cards":[{"card_code":"01004","qty":"1"},{"card_code":"01015","qty":"1"},{"card_code":"01018","qty":"3"},{"card_code":"01019","qty":"2"},{"card_code":"01021","qty":"3"},{"card_code":"01022","qty":"3"},{"card_code":"01024","qty":"2"},{"card_code":"01036","qty":"2"},{"card_code":"01050","qty":"3"},{"card_code":"02026","qty":"2"},{"card_code":"02106","qty":"2"},{"card_code":"03037","qty":"1"},{"card_code":"03052","qty":"2"},{"card_code":"05029","qty":"1"},{"card_code":"05032","qty":"3"},{"card_code":"05033","qty":"2"},{"card_code":"05034","qty":"2"},{"card_code":"05035","qty":"2"},{"card_code":"05036","qty":"3"},{"card_code":"05038","qty":"3"},{"card_code":"05041","qty":"1"},{"card_code":"05042","qty":"1"},{"card_code":"05046","qty":"1"}]},
+	Commenters = ["Link"],
+	DeckDB = TAFFY([Decklist]),
+	SelectedDeck = DeckDB().first()
+	Url_Like = "/user/like",
+	Url_Favorite = "/user/favorite",
+	Url_Copy = "/en/deck/copy/6276",
+	Url_OctgnExport = "/decklist/export/octgn/6276",
+	Url_TextExport = "/decklist/export/text/6276",
+	Url_CardPage = '/en/card/00000',
+	DisplaySort = 'type';
+
+</script>
+  </head>
+  <body>
+  <div id="wrapper">
+      <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">NetrunnerDB</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/en/decks">My Decks</a></li>
+            <li><a href="/en/decklists/popular">Decklists</a></li>
+            <li><a href="/en/search">Cards</a></li>
+			<li><a href="/en/rules">Rules</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+                      <li><a href="/login">Login</a></li>
+                    </ul>
+          <form class="navbar-form navbar-right hidden-xs hidden-sm" action="/find/" target="_blank">
+            <div class="form-group">
+              <input type="text" placeholder="Card Search" class="form-control" name="q">
+            </div>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+  
+
+<div class="container decklist">
+
+<div class="row">
+<div class="col-xs-12">
+<h1>
+            <img src="/web/bundles/netrunnerdbbuilder/images/factions/38px/criminal.png">First Clone deck</h1>
+<div class="decklist-social">
+<div class="pull-right" id="decklist-social-icons">
+<span>published May 31, 2014</span>
+| <span class="social-icon-like">
+	<span class="glyphicon glyphicon-heart"></span> <span class="num">0</span>
+</span>
+| <span class="social-icon-favorite">
+	<span class="glyphicon glyphicon-star"></span> <span class="num">0</span>
+</span>
+| <span class="social-icon-comment">
+	<span class="glyphicon glyphicon-comment"></span> <span class="num">0</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row">
+
+<!-- Left-side Column -->
+<div class="col-md-6">
+
+<div id="deck">
+	
+<!-- Identity and Stats -->
+<div class="row">
+	<div class="col-sm-3">
+		<img id="img_identity" src="" class="img-responsive  hidden-xs">
+	</div><!-- /.col-md-3 -->
+	<div class="col-sm-9">
+		<h3 id="identity"></h3>
+		<div id="btn-group-decklist">
+			<button type="button" id="btn-copy" class="btn btn-default  btn-xs"><span class="glyphicon glyphicon-save"></span> Copy</button>
+			<div class="btn-group">
+				<button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-download"></span> Download <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#" id="btn-download-text">Text file</a></li>
+					<li><a href="#" id="btn-download-octgn">Octgn file</a></li>
+				</ul>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-export"></span> Export <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#" id="btn-export-bbcode">bbCode</a></li>
+					<li><a href="#" id="btn-export-markdown">Markdown (Reddit)</a></li>
+					<li><a href="#" id="btn-export-plaintext">plain text</a></li>
+				</ul>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-sort"></span> Sort <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu" id="menu-sort">
+					<li><a href="#" id="btn-sort-type"><label><input type="radio" name="sort-order" checked="checked">by Type</label></a></li>
+					<li><a href="#" id="btn-sort-number"><label><input type="radio" name="sort-order">by Set</label></a></li>
+					<li><a href="#" id="btn-sort-faction"><label><input type="radio" name="sort-order">by Faction</label></a></li>
+					<li><a href="#" id="btn-sort-title"><label><input type="radio" name="sort-order">by Name</label></a></li>
+				</ul>
+			</div>
+			</div>
+		<div id="influence"></div>
+		<div id="agendapoints"></div>
+		<div id="cardcount"></div>
+		<div id="latestpack"></div>
+	</div><!-- /.col-md-9 -->
+</div><!-- /.row -->
+<!-- Identity and Stats -->
+
+<!-- Deck Content -->
+<div class="row" id="deck-content" style="margin-bottom:10px">
+</div><!-- /#deck-content -->
+<!-- Deck Content -->
+
+<!-- Draw Simulator -->
+<table class="table table-condensed" id="table-draw-simulator">
+<thead>
+<tr><th colspan="1"><span class="glyphicon glyphicon-repeat"></span> Card draw simulator</th></tr>
+</thead>
+<tbody>
+<tr><td class="text-center" title="Click to draw; Shift-click to reset and draw">
+    <div class="btn-group"><a href="#" role="button" class="btn btn-default btn-sm" disabled="disabled">Draw:</a><a href="#" role="button" class="btn btn-default btn-sm" id="draw-simulator-1">1</a><a href="#" role="button" class="btn btn-default btn-sm" id="draw-simulator-2">2</a><a href="#" role="button" class="btn btn-default btn-sm" id="draw-simulator-3">3</a><a href="#" role="button" class="btn btn-default btn-sm" id="draw-simulator-4">4</a><a href="#" role="button" class="btn btn-default btn-sm" id="draw-simulator-5">5</a><a href="#" role="button" class="btn btn-default btn-sm" id="draw-simulator-6">6</a><a href="#" role="button" class="btn btn-default btn-sm" id="draw-simulator-9">9</a><a href="#" role="button" class="btn btn-default btn-sm" id="draw-simulator-all">all</a><a href="#" role="button" class="btn btn-default btn-sm"  disabled="disabled" id="draw-simulator-clear">Reset</a></div>
+    <div title="Odds to have at least 1 copy of a desired card, after having drawn that many cards from the deck, depending of the number of copies in the deck (1 - 2 - 3)"><span class="small">Odds: <span id="draw-simulator-odds-1">0</span>% &ndash; <span id="draw-simulator-odds-2">0</span>% &ndash; <span id="draw-simulator-odds-3">0</span>% <a href="#oddsModal" id="draw-simulator-more" data-toggle="modal" style="margin:0 10px">more</a></span>
+</td></tr>
+<tr><td id="table-draw-simulator-content"></td></tr>
+</tbody>
+</table>
+
+<!-- Graphs -->
+<table class="table table-condensed" id="table-graph-costs">
+<thead>
+<tr><th colspan="1"><span class="glyphicon glyphicon-stats"></span> Repartition by Cost</th></tr>
+</thead>
+<tbody>
+<tr>
+    <td><div id="costChart" width="100%" height="200"><button type="button" class="btn btn-link" onclick="make_cost_graph()">Display graph</button></div></td>
+</tr>
+</tbody>
+</table>
+
+<table class="table table-condensed" id="table-graph-strengths">
+<thead>
+<tr><th colspan="1"><span class="glyphicon glyphicon-stats"></span> Repartition by Strength</th></tr>
+</thead>
+<tbody>
+<tr>
+    <td><div id="strengthChart" width="100%" height="200"><button type="button" class="btn btn-link" onclick="make_strength_graph()">Display graph</button></div></td>
+</tr>
+</tbody>
+</table>
+
+<table class="table table-condensed" id="table-predecessor">
+<thead>
+<tr><th colspan="4"><span class="glyphicon glyphicon-backward"></span> Derived from</th></tr>
+</thead>
+<tbody>
+<tr><td>None. Self-made deck here.</td></tr>
+</tbody>
+</table>
+
+
+<table class="table table-condensed" id="table-successor">
+<thead>
+<tr><th colspan="4"><span class="glyphicon glyphicon-forward"></span> Inspiration for</th></tr>
+</thead>
+<tbody>
+<tr><td>None yet</td></tr>
+</tbody>
+</table>
+
+</div><!-- /#deck -->
+
+</div>
+<!-- Left-side Column -->
+
+
+<!-- Right-side Column -->
+<div class="col-md-6">
+
+<h3 class="decklist-author">
+    <a href="/en/profile/994/Link" class="shaper">Link</a>
+        <small title="User Reputation">6</small>
+</h3>  
+<div id="deck-description">
+</div>
+
+<table class="table">
+<thead>
+<tr><th><span class="glyphicon glyphicon-comment"></span> 0 comments</th></tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>You must be logged in to post comments.</p>
+ 
+</div>
+
+</div>
+<!-- Right-side Column -->
+
+
+
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exportModal" tabindex="-1" role="dialog" aria-labelledby="exportModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<textarea class="form-control" id="export-deck" rows="20"></textarea>
+						</div>
+						</form>
+					</div><!-- /#modal-info -->
+				</div><!-- /.row -->
+			</div><!-- /.modal-body -->
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- Modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h3 class="modal-title">Edit decklist</h3>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-12">
+						<form action="/decklist/edit/6276" method="POST" enctype="multipart/form-data" id="edit-decklistform">
+							<input type="hidden" name="decklist_id" id="edit-decklist-id" value="6276">
+							<div class="form-group">
+								<label for="publish-name">Name</label>
+								<input type="text" class="form-control" name="name" id="edit-decklist-name" maxlength="60" value="First Clone deck" placeholder="Enter a name for this decklist">
+							</div>
+							<div class="form-group">
+								<label for="publish-name">Derived from</label>
+								<input type="text" class="form-control" name="derived" id="edit-decklist-derived" maxlength="80" value="" placeholder="Enter the id or url of a decklist">
+							</div>
+							<div class="form-group">
+								<label for="publish-name">Description</label>
+								<textarea class="form-control" name="description" id="edit-decklist-description" rows="5" placeholder="Enter a brief explanation of the deck strategy and your significant choices"></textarea>
+							</div>
+							<div class="pull-right">
+								<button type="submit" id="btn-publish-submit" class="btn btn-success">Go</button>
+								<button type="button" class="btn btn-default" onclick="$('#editModal').modal('hide')">Cancel</button>
+							</div>
+						</form>
+					</div><!-- /#modal-info -->
+				</div><!-- /.row -->
+			</div><!-- /.modal-body -->
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- Modal -->
+
+<!-- DeleteModal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h3 class="modal-title">Delete decklist</h3>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-12">
+						<form action="/decklist/delete/6276" method="POST" enctype="multipart/form-data" id="delete-decklistform">
+							<input type="hidden" name="decklist_id" id="delete-decklist-id" value="6276">
+							<p>Are you sure you want to delete this decklist?</p>
+							<div class="pull-right">
+								<button type="submit" id="btn-publish-submit" class="btn btn-danger">Yes, delete</button>
+								<button type="button" class="btn btn-default" onclick="$('#deleteModal').modal('hide')">Cancel</button>
+							</div>
+						</form>
+					</div><!-- /#modal-info -->
+				</div><!-- /.row -->
+			</div><!-- /.modal-body -->
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- Modal -->
+
+<!-- Modal -->
+<div class="modal" id="oddsModal" tabindex="-1" role="dialog" aria-labelledby="oddsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3 class="modal-title">Odds Calculator</h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+						<form class="form-horizontal" role="form">
+						    <div class="form-group">
+						        <label for="inputEmail3" class="col-xs-7 control-label">Number of cards in deck</label>
+						        <div class="col-xs-2">
+						            <input type="number" class="form-control" id="odds-calculator-N" value="0">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-xs-7 control-label">Number of <em>desired</em> cards in deck</label>
+								<div class="col-xs-2">
+									<input type="number" class="form-control" id="odds-calculator-K" value="0">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-xs-7 control-label">Number of cards drawn</label>
+								<div class="col-xs-2">
+									<input type="number" class="form-control" id="odds-calculator-n" value="0">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-xs-7 control-label">Number of <em>desired</em> cards in draw (at least)</label>
+								<div class="col-xs-2">
+									<input type="number" class="form-control" id="odds-calculator-k" value="0">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-xs-7 control-label">Probability of such an outcome</label>
+								<div class="col-xs-2">
+									 <p class="form-control-static"><span id="odds-calculator-p"></span>%</p>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Modal -->
+
+    <div id="push"></div>
+  </div>
+    <div id="footer">
+    <div class="container">
+    <div class="row">
+    <ul class="list-inline pull-right">
+    	<li><a class="flag flag-us" href="/en/decklist/6276/first-clone-deck"></a></li>
+<li><a class="flag flag-fr" href="/fr/decklist/6276/first-clone-deck"></a></li>
+<li><a class="flag flag-de" href="/de/decklist/6276/first-clone-deck"></a></li>
+<li><a class="flag flag-es" href="/es/decklist/6276/first-clone-deck"></a></li>
+<li><a class="flag flag-pl" href="/pl/decklist/6276/first-clone-deck"></a></li>
+<li><a class="flag flag-it" href="/it/decklist/6276/first-clone-deck"></a></li>
+
+	    </ul>
+    
+    <ul class="list-inline">
+    <li><a href="/en/about">About</a></li>
+    <li><a href="/en/apidoc">API</a></li>
+    <li><a href="/tools/demo">Integration</a></li>
+    <li><a href="/en/donators">Donators</a> <span class="glyphicon glyphicon-gift donator" title="NetrunnerDB Gracious Donator"></span></li>
+    <li><a href="javascript:localStorage.clear()">Clear data</a></li>
+    </ul>
+    </div>
+    
+    <div class="row">
+    <p>
+    Designed and built by <a href="//twitter.com/alsciende">@alsciende</a> 
+    </p>
+    
+    </div>
+    <div class="row">
+    <p>
+    Source code, Bug reports, Feature Requests and Changelog on <a href="https://github.com/Alsciende/netrunnerdb">GitHub</a>
+    </p>
+    
+    </div>
+    
+    <div class="row">
+    <p>
+    Contribute by giving money on <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4SB7QHB5XRN7Y">Paypal (€)</a> or <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HHBUW2QYG6ZUC">Paypal ($)</a> or directly to <i>alsciende</i> (at) <i>icloud.com</i>.
+    </p>
+    </div>
+    
+    <div class="row small">
+    <p>
+    The information presented on this site about Android:Netrunner, both literal and graphical, is copyrighted by Fantasy Flight Games and/or Wizards of the Coast.
+    </p>
+    <p>
+    This website is not produced, endorsed, supported, or affiliated with Fantasy Flight Games and/or Wizards of the Coast. 
+    </p>
+    </div>
+    </div>
+    </div>
+  </body>
+</html>
+
