@@ -1,5 +1,5 @@
 # Netrunner-Social-Network-Analysis-2
-An unfinished effort to update my earlier Netrunner project
+*An unfinished effort to update my earlier Netrunner project*
 
 About a year after my original Netrunner Social Network Analysis project (https://github.com/MTKnife/Netrunner-Social-Network-Analysis), I decided to do things right, with automated web-scraping.  Using two different repositories would give a larger corpus of decks to analyze, and the release of additional expansions to the game in the previous year should have created a considerably broader range of options for deck design.  The wider variety of decks would make any analysis more meaningful (back when I built the first version of first project, the number of cards available was fairly limited, making most decks look similar).  Obviously, we don't have anything like a representative sample here, since there's no way to discover all of the decks players have actually used in the game (most of which were never posted), or how often they were used--or, for that matter, whether the decks that have been posted have actually been used.  Nonetheless, I was hoping that analyzing a wide variety of decks would reveal meaningful patterns, especially for the serious players who care enough about the game to post their decks online.
 
